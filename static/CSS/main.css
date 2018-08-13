@@ -1,0 +1,154 @@
+/* Signup styles */
+
+body{
+    background-color: rgb(151, 199, 151);
+    font-family: 'Lato', 'Arial Narrow', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+main-signup{
+    display: flex;
+    justify-content: center;
+  
+}
+
+.text-primary{
+  color: #07923d;
+}
+
+section#Signup-section{
+    padding: 3rem 6rem;
+}
+
+.header{
+    text-align: center;
+}
+
+.header .logo{
+    padding:14px 18px;
+    background: #ffffff;
+    width: fit-content;
+    margin: 0 auto;
+    color:#000000;
+    
+}
+
+.header > h3{
+    font-weight:950;
+    font-size:30px;
+    margin-bottom: 10px;
+}
+
+.header > h4{
+    font-weight: lighter;
+    font-size: large;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.form-container{
+    display: flex;
+}
+
+.form-container > .form-element:first-child {
+    margin-right: 10px;
+  }
+
+.form-container > .child-element {
+    margin: 0;
+  }
+
+.form-element,
+.form-container {
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.form-element > label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+.form-element > input {
+    padding: 8px 18px;
+    font-size: 17px;
+    border: 1px solid #ddd;
+    width: 100%;
+    height: 50px;
+  }
+
+@media (max-width: 500px) {
+    main-signup {
+      display: block;
+    }
+    
+    section#Signup-section {
+      padding: 2rem 0;
+    }
+
+    .text-group {
+      flex-direction: column;
+      flex-basis: 40;
+    }
+  
+   }
+  
+  .form-element > select {
+    padding: 8px 18px;
+    font-size: 17px;
+    border: 1px solid #ddd;
+    width: 100%;
+    height: 50px;
+  }
+  
+.form-element > select:focus {
+    outline: none;
+    border-color: #07923d;
+  }
+
+.form-element > input:focus {   
+    outline: none;
+    border-color: #07923d;
+  } 
+
+  .Terms {
+    font-size: 16px;
+  }
+
+  a:hover,
+  a:active{
+    color: #ffffff;
+    border-bottom: 1px solid transparent;
+}
+
+button.main-signup {
+    background: #07923d;
+    padding: 18px;
+    border: 1px solid #ddd;
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+
+
+
+
+
+
+
+ 
+
+  
+
+  
+
+
