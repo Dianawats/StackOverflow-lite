@@ -1,0 +1,286 @@
+/* Signup styles */
+
+body{
+    background-color: rgb(151, 199, 151);
+    font-family: 'Lato', 'Arial Narrow', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body.home {
+  background: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/**
+  * General styles
+  */
+
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .clear {
+    clear: both;
+  }
+  
+  button {
+    border: none;
+  }
+  
+  form .form-input {
+    border: 1px solid rgb(151, 199, 151);
+    padding: 10px;
+    width: 100%;
+    border-radius: 4px;
+  }
+  
+  form .form-input.small {
+    padding: 8px !important;
+  }
+  
+  form .form-row {
+    margin-bottom: 16px;
+  }
+  
+  .btn {
+    background: grey;
+    padding: 10px 10px;
+    margin-top: 5px !important;
+    cursor: pointer;
+  }
+  
+  .btn-green {
+    background: green;
+    color: #ffffff;
+  }
+  
+  .tag {
+    background: rgba(151, 199, 151, .6);
+    padding: 2px 5px;
+    border-radius: 2px;
+    display: inline;
+    margin-right: 5px;
+    margin-bottom: 8px;
+  }
+  
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: green;
+  }
+  
+  a:hover, a:active{
+      color: rgb(151, 199, 151);
+  }
+  
+  .rounded {
+    border-radius: 4px;
+  }
+  
+  .margin-10 {
+    margin-bottom: 10px;
+  }
+  
+  .margin-20 {
+    margin-bottom: 20px;
+  }
+  
+  .margin-30 {
+    margin-bottom: 30px;
+  }
+  
+  .hading-20 {
+    font-size: 20px;
+  }
+  
+  .heading-25 {
+    font-size: 25px;
+  }
+  
+  .heading-30 {
+    font-size: 30px;
+  }
+  
+  .divider {
+    width: 100%;
+    border-bottom: 1px solid #e0e0e0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .divider.light {
+    border-color: #eeeeee;
+  }
+  
+  .float-right {
+    float: right;
+  }
+  
+  label {
+    display: block;
+    cursor: pointer;
+  }
+  
+  .bold {
+    font-weight: bold;
+  }
+  
+  /**
+    * home page styling
+    */
+  
+  home-main { 
+    width: 100%;
+  }
+  
+  section.header-row {
+    height: 50px;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0px 0px 6px rgba(0,0,0,0.2);
+  }
+  
+  div.brand-logo {
+    width: 30%;
+    float: left;
+    padding: 10px;
+    font-size: 25px;
+  }
+  
+  div.search {
+    width: 30%;
+    float: left;
+    padding: 10px;
+  }
+  
+  div.brand-links {
+    padding: 10px;
+    width: 30%;
+    float: left;
+  
+  }
+  
+  ul.nav {
+    margin-top: 2px;
+  }
+  
+  ul.nav a {
+    padding: 0 20px;
+    margin-top: 5px;
+  }
+  
+  /** home main content styles **/
+  .side-bar-left {
+    width: 25%;
+    float: left;
+    padding-right: 16px;
+  }
+  
+  .side-bar-left .left-nav a {
+    color: #555;
+    display: block;
+    padding: 8px 0;
+  }
+  
+  .side-bar-left .left-nav a:hover {
+    color: #222;
+  }
+  
+  .side-bar-left .left-nav a.active {
+    color: #111;
+    font-weight: bold;
+    background: #ddd;
+    padding-left: 10px;
+  }
+  
+  label.subheader {
+    text-transform: uppercase;
+    color: #666;
+    font-size: 13px;
+  }
+  
+  .question-content {
+    float: left;
+    width: 70%;
+    border-left: 1px solid #e0e0e0;
+  }
+  
+  .question-content .heading {
+    padding: 16px 24px;
+  }
+  
+  .question-content .heading h3 {
+    padding: 0;
+    margin: 0;
+    display: inline;
+  }
+  
+  .question-row {
+    padding: 8px 0;
+  }
+  
+  .question-row .numbers {
+    float: left;
+    width: 25%;
+  }
+  
+  .question-row .numbers .number-slot {
+    width: 33%;
+    float: left;
+    text-align: center !important;
+    color: #666;
+    
+  }
+  
+  .question-row .numbers .number-slot:hover {
+    cursor: pointer !important;
+  }
+  
+  .question-row .question-summaries {
+    float: left;
+    width: 66%;
+  }
+  
+  .question-row .question-summaries a.question {
+    font-size: 20px;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  /** side ber right styles */
+  
+  .side-bar-right {
+    width: 25%;
+    float: left;
+    padding: 20px;
+  }
+  
+  .widget {
+    border: 1px solid #ddd;
+    box-shadow: 0px 0px 10px rgba(0,0,0,.1);
+    min-height: 50px;
+  }
+  
+  .widget .widget-title {
+    background: #f9f9f9;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .widget .widget-content {
+    padding: 10px;
+  }
+  
+  .widget .tag {
+    display: inline-flex;
+  }
