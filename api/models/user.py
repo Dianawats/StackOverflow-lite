@@ -1,5 +1,9 @@
 import re
 from api.models.user import Users
+from api import generate_id
+
+users_list = []
+users_id = generate_id(users_list)
 
 
 class User(object):
