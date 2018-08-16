@@ -10,19 +10,18 @@ class User(object):
     """Creating a class for the user model
     """
 
-    def __init__(self, user_id, first_name, last_name, email, password):
+    def __init__(self, user_id, user_name, email, password):
         self.user_id = user_id
-        self.first_name = first_name
-        self.last_name = last_name
+        self.user_name = user_name
         self.email = email
         self.password = password
 
     @property
-    def first_name(self):
-        return self._first_name
+    def user_name(self):
+        return self._user_name
         
-    @first_name.setter
-    def first_name(self, value):
+    @user_name.setter
+    def user_name(self, value):
         if not value:
             raise Exception("the field can't be null")
         if len(value) <= 2:
@@ -30,22 +29,7 @@ class User(object):
         if re.compile('[!@#$%^&*:;?><.0-8]').match(value):
             raise ValueError("not permitted xters are invalid")
 
-        self._first_name = value
-
-    @property
-    def last_name(self):
-        return self._last_name
-        
-    @last_name.setter
-    def last_name(self, value):
-        if not value:
-            raise Exception("the field can't be null")
-        if len(value) <= 2:
-            raise Exception("the last name is very short")
-        if re.compile('[!@#$%^&*:;?><.0-8]').match(value):
-            raise ValueError("not permitted xters are invalid")
-
-        self._last_name = value
+        self._user_name = value
 
     @property
     def email(self):
