@@ -22,7 +22,7 @@ def index():
 
 
 @app.route('/api/v1/questions', methods=['GET'])
-"""Creating a get question function, that is 
+"""Creating a get question function, that is\ 
 associated with the URI and only for GET http method
 and returns JSON data
 """
@@ -30,8 +30,17 @@ def get_questions():
     return jsonify({'questions': questions})
 
 
+@app.route('/api/v1/questions/<int:question_id>', methods=['GET'])
+def get_question(question_id):
+    question = [question in questions if question['id'] == question_id]
+    if len(question) == 0:
+        abort(404)
+    return jsonify({'question': question[0]})
+
+
 @app.errorhandler(404)
 def not_found(error):
     return make_response(jsonify({'error': 'Not found'}), 404)
 
-@app.route('/api/v1/questions', methods=['POST'])
+
+
