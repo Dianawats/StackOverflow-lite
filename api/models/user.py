@@ -33,6 +33,21 @@ class User(object):
         self._first_name = value
 
     @property
+    def last_name(self):
+        return self._last_name
+        
+    @last_name.setter
+    def last_name(self, value):
+        if not value:
+            raise Exception("the field can't be null")
+        if len(value) <= 2:
+            raise Exception("the last name is very short")
+        if re.compile('[!@#$%^&*:;?><.0-8]').match(value):
+            raise ValueError("not permitted xters are invalid")
+
+        self._last_name = value
+
+    @property
     def email(self):
         return self._email
 
@@ -57,7 +72,7 @@ class User(object):
                 "Weak password \n Password must be atleast 6 characters long ")
         if not re.search(r'[0-15]', pwd):
             raise Exception(
-                'Weak password \n Password should consist atleast one number')
+                'Weak password \n Password should contain atleast one number')
         if pwd.isupper() or pwd.islower() or pwd.isdigit():
             print(
                 "Weak password \n Either you have to add alphabets or \
