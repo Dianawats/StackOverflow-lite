@@ -10,32 +10,34 @@ class Questions:
         self.questions = [
             {
                 'id': 1,
+                'title': 'Datatypes-boolean',
                 'question_body': 'how to write a method using hibernate\
                                   which returns boolean',
-                'question_tags': 'javascript', 
+                'question_tags': 'javascript',
                 'answer': [
                     {
                         'answer_id': 1,
-                        'answer_body': 'for that debug and check what your query \
-                                        exactly returns if true then here also\
-                                        will return true only',
+                        'answer_body': 'it is along one i will\
+                                        send you the code.'
+                    },
 
-                    }
-                ]
-            },
+                    {
+                        'answer_id': 2,
+                        'answer_body': 'this is interpreted lang'
+                    }]
+            }, 
             {
                 'id': 2,
+                'title': 'Programming in python',
                 'question_body': 'How is programming taking us',
                 'question_tags': 'import',
                 'answer': [
-                    {
-                        'answer_id': '',
-                        'answer_body': '',
-                    }
+                    {'answer_id': '',
+                     'answer_body': ''
+                     }
                 ]
-            }
-        ]
-
+            }]
+            
         return self.questions
 
     def __str__(self):
