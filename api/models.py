@@ -39,3 +39,11 @@ class Questions:
             }]
             
         return self.questions
+        
+    def __str__(self):
+        """String representation of the list returns
+        """
+        return str(self.list_of_question)
+
+# Object class is being instatianted
+questions = Questions()
