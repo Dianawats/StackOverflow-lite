@@ -5,14 +5,16 @@
     """
 
 from flask import Flask, request, jsonify, make_response, abort
-from.models import Questions
+from api.models import questions
+from api.models import answers
 
 # registering the application name
 app = Flask(__name__)
 
 # question object is being initiated
-questionsObj = Questions()
-questions = questionsObj.list_of_question()
+questions = questions.list_of_question()
+# access the method of class Answers
+answers = answers.list_of_answer()
 
 
 @app.route('/')
