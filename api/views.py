@@ -58,7 +58,7 @@ def not_found(error):
 @app.errorhandler(400)
 def bad_request(error):
     """
-    No response from the server because of bad request
+    the server won't respond because of bad request
     Args:
         param (error): error
     Returns status code:
@@ -90,3 +90,19 @@ def get_questions():
         questions, ok
     """
     return jsonify({'questions': questions}), 200
+
+
+@app.route('/api/v1/questions/<int:question_id>', methods=['GET'])
+def get_question(question_id):
+    """
+    Returns specific question given id
+    Args:
+        param (int): question id
+    Returns:
+        question, ok
+    """
+    question = _get_question(question_id)
+    if not question:
+        abort(404)
+    return jsonify({'question': question}), 200
+
