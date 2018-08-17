@@ -31,15 +31,15 @@ def _get_question(question_id):
            if question['question_id'] == question_id]
 
 
-def _find_question(question_name):
+def _find_question(question_title):
     """
     protected method that returns the question
     Args:
-        param (question_name): Question name
+        param (question_title): Question name
     Returns:
-        question_name
+        question_title
     """
-    return next(filter(lambda q: q['question_name'] == question_name,
+    return next(filter(lambda q: q['question_title'] == question_title,
                 questions), None)
 
 
