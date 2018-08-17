@@ -4,13 +4,13 @@
     This module provides class-based views inspired by the ones in flask.
     """
 
-from flask import Flask, request, jsonify, make_response
+from flask import Flask, request, jsonify, make_response, abort
 from.models import Questions
 
 # registering the application name
 app = Flask(__name__)
 
-# question object is being initiates
+# question object is being initiated
 questionsObj = Questions()
 questions = questionsObj.list_of_question()
 
