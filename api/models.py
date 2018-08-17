@@ -31,7 +31,7 @@ class Questions:
         return str(self.list_of_question)
 
 
-Class Answers:
+class Answers:
     """This class represents the answer list """
 
     def list_of_answer(self):
@@ -51,7 +51,7 @@ Class Answers:
             
         ]
 
-    return self.answers
+        return self.answers
 
 
 # Object class is being instatianted
