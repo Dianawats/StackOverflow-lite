@@ -14,6 +14,7 @@ app = Flask(__name__)
 questionsObj = Questions()
 questions = questionsObj.list_of_question()
 
+
 @app.route('/')
 def index():
     """Homepage by default"""
@@ -40,6 +41,7 @@ def _find_question(question_name):
     """
     return next(filter(lambda q: q['question_name'] == question_name,
                 questions), None)
+
 
 @app.errorhandler(404)
 def not_found(error):
