@@ -62,11 +62,19 @@ class ApiTestCase(unittest.TestCase):
         data = json.loads(res.get_data())
         self.assertEqual(len(data['questions']), 2)
         self.assertEqual(res.status_code, 200)
-      
+
+    def test_question_as_answer(self):
+        res = self.app.get(GOOD_URL)
+        data = json.loads(res.get_data())
+        self.assertEqual(len(data['answers']), 3)
+        self.assertEqual(res.status_code, 200)
+ 
     def tearDown(self):
-                """teardown configs after running tests
-                Method to tidy up lists after the test is run
-                """
+        """teardown configs after running tests
+            Method to tidy up lists after the test is run
+        """
+        views.questions = self.questionCopy
+        views.answers = self.answerCopy
 
                 
 # Make the tests conveniently executable
