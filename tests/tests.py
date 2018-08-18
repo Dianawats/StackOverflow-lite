@@ -4,9 +4,10 @@ import json
 from api import views
 from copy import deepcopy
 
+
 DEFAULT_URL = 'http://127.0.0.1:5000/api/v1/questions'
-BAD_URL = '{}/3'.format(DEFAULT_URL)
 GOOD_URL = '{}/2'.format(DEFAULT_URL)
+BAD_URL = '{}/3'.format(DEFAULT_URL)
 ANSWER_URL = '{}/2/answers'.format(DEFAULT_URL)
 NO_QUESTION_URL = '{}/3/answers'.format(DEFAULT_URL)
 
