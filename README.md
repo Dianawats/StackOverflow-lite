@@ -1,6 +1,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/Dianawats/StackOverflow-lite/badge.svg?branch=getqns)](https://coveralls.io/github/Dianawats/StackOverflow-lite?branch=getqns)
 [![Build Status](https://travis-ci.org/Dianawats/StackOverflow-lite.svg?branch=getqns)](https://travis-ci.org/Dianawats/StackOverflow-lite)
 [![Maintainability](https://api.codeclimate.com/v1/badges/811b53b82c3b6b3eb9e3/maintainability)](https://codeclimate.com/github/Dianawats/StackOverflow-lite/maintainability
+
 [![Test Coverage](https://api.codeclimate.com/v1/badges/811b53b82c3b6b3eb9e3/test_coverage)](https://codeclimate.com/github/Dianawats/StackOverflow-lite/test_coverage)
 
 
