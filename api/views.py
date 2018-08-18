@@ -31,15 +31,15 @@ def _get_question(question_id):
            if question['question_id'] == question_id]
 
 
-def _find_question(question_name):
+def _find_question(question_title):
     """
     protected method that returns the question
     Args:
-        param (question_name): Question name
+        param (question_title): Question name
     Returns:
-        question_name
+        question_title
     """
-    return next(filter(lambda q: q['question_name'] == question_name,
+    return next(filter(lambda q: q['question_title'] == question_title,
                 questions), None)
 
 
@@ -106,3 +106,27 @@ def get_question(question_id):
         abort(404)
     return jsonify({'question': question}), 200
 
+
+@app.route('/api/v1/questions', methods=['POST'])
+def create_question():
+    """
+    Args: None
+    If the data isn't there, or if it is there, but we are missing a title item
+    returns: 400, bad request
+    We append the new question to our questions array,
+    then respond to the client with the added question,
+    send back a status code 201, "Created"
+
+    """
+    if not request.json or not'title' in request.json:
+        abort(400)
+    question = {
+        'id': questions[-1]['id'] + 1,
+        'title': request.json['title'],
+        'question_body': request.json.get('question_body', ""),
+        'question_tag': request.json.get('question_tag', "")
+    }
+    questions.append(question)
+    return jsonify({['question']}), 201
+
+    
