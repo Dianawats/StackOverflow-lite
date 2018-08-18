@@ -10,5 +10,3 @@ if __name__ == '__main__':
 
     app.config.from_object(app_config.get(config_name))
     app.run()
-
-
