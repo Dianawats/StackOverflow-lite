@@ -4,12 +4,10 @@
     This module provides class-based views inspired by the ones in flask.
     """
 
-from flask import Flask, request, jsonify, make_response, abort
+from flask import request, jsonify, make_response, abort
+from api import app
 from api.models import questions
 from api.models import answers
-
-# registering the application name
-app = Flask(__name__)
 
 # question object is being initiated
 questions = questions.list_of_question()
@@ -20,7 +18,7 @@ answers = answers.list_of_answer()
 @app.route('/')
 def index():
     """Homepage by default"""
-    return "Endpoints using flask"
+    return "Testing the apis endpoints"
 
 
 def _get_question(question_id):
@@ -72,7 +70,7 @@ def bad_request(error):
 @app.errorhandler(409)
 def question_exist(error):
     """
-    Question is existing, the request is conflicting 
+    Question is existing, the request is conflicting: 
     Args:
         param (error): error
     Returns:
@@ -161,4 +159,4 @@ def add_answer(question_id):
     }
 
     answers.append(answer)
-    return jsonify({'answer': answer}), 201    
+    return jsonify({'answer': answer}), 201  
