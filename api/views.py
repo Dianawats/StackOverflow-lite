@@ -5,14 +5,16 @@
     """
 
 from flask import Flask, request, jsonify, make_response, abort
-from.models import Questions
+from api.models import questions
+from api.models import answers
 
 # registering the application name
 app = Flask(__name__)
 
 # question object is being initiated
-questionsObj = Questions()
-questions = questionsObj.list_of_question()
+questions = questions.list_of_question()
+# access the method of class Answers
+answers = answers.list_of_answer()
 
 
 @app.route('/')
@@ -129,4 +131,34 @@ def create_question():
     questions.append(question)
     return jsonify({['question']}), 201
 
-    
+
+@app.route('/api/v1/questions/<int:question_id>/answers', methods=['POST'])
+def add_answer(question_id):
+    if not request.json or 'answer_body' not in request.json:
+        abort(400)
+
+    if _get_question(question_id) is False:
+        abort(404)
+
+    for question in questions:
+        for key, value in question.items():
+            question = question
+            break
+
+    last_id = 0
+
+    if len(answers) > 0:
+        last_id = answers[-1].get('answer_id')
+
+    answer_id = last_id + 1
+    question_id = _get_question(question_id)['question_id']
+    answer_body = request.json.get('answer_body')
+
+    answer = {
+        'answer_id': answer_id,
+        'question_id': question_id,
+        'answer_body': answer_body
+    }
+
+    answers.append(answer)
+    return jsonify({'answer': answer}), 201    
