@@ -31,11 +31,11 @@ class ApiTestCase(unittest.TestCase):
                          'Datatypes-boolean')
         self.assertEqual(res.status_code, 200)
 
-    def test_question_creation(self):
-        """Test API can create a question (POST request)"""
-        res = self.app.get(DEFAULT_URL)
-        self.assertEqual(res.status_code, 201)
-        self.assertIn('Datatypes-boolean', str(res.data))
+    # def test_question_creation(self):
+    #     """Test API can create a question (POST request)"""
+    #     res = self.app.get(DEFAULT_URL)
+    #     self.assertEqual(res.status_code, 201)
+    #     self.assertIn('Datatypes-boolean', str(res.data))
 
     def test_api_can_get_all_questions(self):
         """Test API can get a question (GET request)."""
