@@ -24,8 +24,6 @@ Users can search for questions on the platform Users can view questions with the
 <strong>Getting Started</strong><br>
 
 
-You can clone the project using the link <a href = "https://github.com/Dianawats/StackOverflow-lite">Github repository</a> and checkout the current output from [github pages]
-
 <strong>Instalations:</strong><br>
 Clone the project into your local repository using this command:<br>
 git clone https://github.com/Dianawats/StackOverflow-lite<br>
