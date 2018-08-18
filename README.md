@@ -1,5 +1,4 @@
-[![Coverage Status](https://coveralls.io/repos/github/Dianawats/StackOverflow-lite/badge.svg?branch=gh-pages)](https://coveralls.io/github/Dianawats/StackOverflow-lite?branch=gh-pages)
-
+[![Coverage Status](https://coveralls.io/repos/github/Dianawats/StackOverflow-lite/badge.svg?branch=getqns)](https://coveralls.io/github/Dianawats/StackOverflow-lite?branch=getqns)
 [![Build Status](https://travis-ci.org/Dianawats/StackOverflow-lite.svg?branch=getqns)](https://travis-ci.org/Dianawats/StackOverflow-lite)
 
 <strong>Project Overview</strong><br>
