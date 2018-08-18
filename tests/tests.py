@@ -31,6 +31,25 @@ class ApiTestCase(unittest.TestCase):
                          'Datatypes-boolean')
         self.assertEqual(res.status_code, 200)
 
+    def test_post_answer(self):
+        answer = {
+            'answer_body': 'java is also an OOP programming language'
+        }
+        res = self.app.post(ANSWER_URL,
+                            data=json.dumps(answer),
+                            content_type='application/json')
+        self.assertEqual(res.status_code, 201)
+
+    def test_add_question(self):
+        question = {
+            'question_body': 'how to write a method using hibernate',
+            'question_tag': 'java?'
+        }
+        res = self.app.post(DEFAULT_URL,
+                            data=json.dumps(question),
+                            content_type='application/json')
+        self.assertEqual(res.status_code, 201)
+
     # def test_question_creation(self):
     #     """Test API can create a question (POST request)"""
     #     res = self.app.get(DEFAULT_URL)
