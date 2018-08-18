@@ -1,6 +1,7 @@
 import app
 import unittest
 import json
+from api import views
 from copy import deepcopy
 
 DEFAULT_URL = 'http://127.0.0.1:5000/api/v1/questions'
@@ -25,15 +26,15 @@ class ApiTestCase(unittest.TestCase):
     def test_get_single_question(self):
         res = self.app.get(DEFAULT_URL)
         data = json.loads(res.get_data())
-        self.assertEqual(data['questions'][0]['question_name'], 
-                         'what is python?')
+        self.assertEqual(data['questions'][0]['question_title'], 
+                         'Datatypes-boolean')
         self.assertEqual(res.status_code, 200)
 
     def test_question_creation(self):
         """Test API can create a question (POST request)"""
         res = self.app.get(DEFAULT_URL)
         self.assertEqual(res.status_code, 201)
-        self.assertIn('python programming', str(res.data))
+        self.assertIn('Datatypes-boolean', str(res.data))
 
     def test_api_can_get_all_questions(self):
         """Test API can get a question (GET request)."""
@@ -46,9 +47,8 @@ class ApiTestCase(unittest.TestCase):
                 """teardown configs after running tests
                 Method to tidy up lists after the test is run
                 """
-                
-                 
 
+                
 # Make the tests conveniently executable
 if __name__ == "__main__":
     unittest.main()
