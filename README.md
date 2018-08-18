@@ -1,3 +1,7 @@
+[![Coverage Status](https://coveralls.io/repos/github/Dianawats/StackOverflow-lite/badge.svg?branch=gh-pages)](https://coveralls.io/github/Dianawats/StackOverflow-lite?branch=gh-pages)
+
+
+
 <strong>Project Overview</strong><br>
 
  <strong>StackOverflow-lite:</strong> <br>
