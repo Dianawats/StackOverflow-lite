@@ -24,7 +24,7 @@ Users can search for questions on the platform Users can view questions with the
 <strong>Getting Started</strong><br>
 
 
-<strong>Instalations:</strong><br>
+<strong>Installations:</strong><br>
 Clone the project into your local repository using this command:<br>
 git clone https://github.com/Dianawats/StackOverflow-lite<br>
 
@@ -40,7 +40,12 @@ The project has been built with the following technologies so far:<br>
 
 <br>
 
+Find the UI here [GitHub Pages](https://Dianawats.github.io/StackOverflow-lite/UI/)
+
 <strong>Author:</strong><br>
 
 <Strong>Diana Nakiwala</strong>
 
+## Challenge 2:
+<br>
+Expected to create a set of API endpoints already defined below and use data structures to store data in memory (don’t use a database).
