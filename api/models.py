@@ -9,14 +9,14 @@ class Questions:
         """
         self.questions = [
             {
-                'id': 1,
+                'question_id': 1,
                 'title': 'Datatypes-boolean',
                 'question_body': 'how to write a method using hibernate\
                                   which returns boolean',
                 'question_tags': 'javascript'      
             },
             {
-                'id': 2,
+                'question_id': 2,
                 'title': 'Programming in python',
                 'question_body': 'How is programming taking us',
                 'question_tags': 'imports'
@@ -26,7 +26,7 @@ class Questions:
         return self.questions
 
     def __str__(self):
-        """String representation of the list returns
+        """this function returns string representation of the list
         """
         return str(self.list_of_question)
 
@@ -37,13 +37,25 @@ class Answers:
     def list_of_answer(self):
         self.answers = [
             {
-                'answer_id': 2,
-                'question_id': 1,
+                'answer_id': 1,
+                'question_id': 2,
                 'answer_body': 'Do more readings on oop that is\
                                 when you will pick up something on methods '
             },
             {
                 'answer_id': 3,
+                'question_id': 2,
+                'answer_body': 'So far programming is moving well,\
+                                but we are catching up with python faster'
+            },
+            {
+                'answer_id': 2,
+                'question_id': 2,
+                'answer_body': 'programming is abit hard but the more you focus\
+                                it becomes easy' 
+            },
+            {
+                'answer_id': 4,
                 'question_id': 3,
                 'answer_body': 'So far programming is moving well,\
                                 but we are catching up with python faster'
@@ -54,7 +66,7 @@ class Answers:
         return self.answers
 
 
-# Object class is being instatianted
+# Object class is being instantiated
 questions = Questions()
 answers = Answers()
 
