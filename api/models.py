@@ -4,8 +4,7 @@ class Questions:
     def list_of_question(self):
         """
         Initializes the questions object
-        :args None
-        :return Questions
+        passes no argument and returns Questions
         """
         self.questions = [
             {
