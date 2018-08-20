@@ -1,17 +1,15 @@
 """
-    api.views
-    ~~~~~~~~~~~
-    This module provides class-based views inspired by the ones in flask.
-    """
+    This module provides class-based views.
+"""
 
-from flask import request, jsonify, make_response, abort
+from flask import Flask, request, jsonify, make_response, abort
 from api import app
 from api.models import questions
 from api.models import answers
 
-# question object is being initiated
+# Question object is being initiated
 questions = questions.list_of_question()
-# access the method of class Answers
+# The method of class Answers is accessed
 answers = answers.list_of_answer()
 
 
@@ -32,13 +30,9 @@ def _get_question(question_id):
 
 
 def _get_answer_question(question_id):
-    '''
-    This method that returns the answer
-    Args:
-        param (int): question_id
-    Returns:
-        answers
-    '''
+    """
+    This method returns the answer and passes the question id
+    """
     if _get_question is False:
         abort(404)
     find_answer = []
@@ -50,11 +44,8 @@ def _get_answer_question(question_id):
 
 def _find_question(question_title):
     """
-    This method returns question
-    Args:
-        param (question_title): Question title
-    Returns:
-        question_title
+    This method returns question by passing a question_title 
+    as a parameter and returns question title
     """
     return next(filter(lambda q: q['question_title'] == question_title,
                 questions), None)
@@ -76,10 +67,8 @@ def not_found(error):
 def bad_request(error):
     """
     the server will not respond because of bad request
-    Args:
-        param (error): error
-    Returns status code:
-        400, badrequest error
+    Args: param (error): error
+    Returns status code: 400, badrequest error
     """
     return make_response(jsonify({'error': 'Bad request'}), 400)
 
@@ -87,11 +76,9 @@ def bad_request(error):
 @app.errorhandler(409)
 def question_exists(error):
     """
-    Question exits, the request is conflicting 
-    Args:
-        param (error): error
-    Returns:
-        conflicts, 409
+    This function defines question exits, the request is conflicting, 
+    and passes a error as a parameter to return conflicts, 
+    status code 409  
     """
     return make_response(jsonify({'error': 'the qn has been created already'}),
                          409)
@@ -101,10 +88,7 @@ def question_exists(error):
 def get_questions():
     """
     This method fetches all questions from the model
-    Args:
-        None
-    Returns:
-        questions, ok
+    and passes argument None then returns questions, ok
     """
     return jsonify({'questions': questions}), 200
 
@@ -112,7 +96,7 @@ def get_questions():
 @app.route('/api/v1/questions/<int:question_id>', methods=['GET'])
 def get_question(question_id):
     """
-    Returns specific question given id
+    This method returns specific question with the given id
     Args:
         param (int): question id
     Returns:
