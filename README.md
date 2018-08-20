@@ -6,6 +6,10 @@
 This is a platform where people can ask questions and provide answers.
 
 
+Find the UI here [GitHub Pages](https://dianawats.github.io/StackOverflow-lite/)<br>
+
+
+
 <strong>Required Features:</strong> <br>
  
 Users can create an account and log in. <br>
@@ -38,10 +42,6 @@ The project has been built with the following technologies so far:<br>
     <li>CSS</li>
     <li>Javascript</li>
 </ol>
-
-<br>
-
-Find the UI here [GitHub Pages](https://Dianawats.github.io/StackOverflow-lite/UI/)
 
 <strong>Author:</strong><br>
 
