@@ -33,8 +33,8 @@ class ApiTestCase(unittest.TestCase):
     def test_api_get_single_question(self):
         res = self.app.get(DEFAULT_URL)
         data = json.loads(res.get_data())
-        self.assertEqual(data['questions'][0]['question_title'], 
-                         'Datatypes-boolean')
+        self.assertEqual(data['questions'][0]['question_body'], 
+                         'lists are types of data structures')
         self.assertEqual(res.status_code, 200)
 
     def test_api_can_post_answer(self):
