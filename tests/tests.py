@@ -63,7 +63,7 @@ class ApiTestCase(unittest.TestCase):
         self.assertEqual(len(data['questions']), 2)
         self.assertEqual(res.status_code, 200)
 
-    def test_question_as_answer(self):
+    def test_question_answer(self):
         res = self.app.get(GOOD_URL)
         data = json.loads(res.get_data())
         self.assertEqual(len(data['answers']), 3)
@@ -80,6 +80,3 @@ class ApiTestCase(unittest.TestCase):
 # Make the tests conveniently executable
 if __name__ == "__main__":
     unittest.main()
-
-
-
