@@ -3,13 +3,16 @@ python:
   - "3.6"
 # command to install dependencies
 install:
-  - "pip install -r requirements.txt"
+  - pip install -r requirements.txt
+  - pip install pytest pytest-cov
+  - pip install coveralls
 
 
 # command to run tests
 script:
-   - nosetests --with-coverage --cover-tests
-   - coverage report
+   - nosetest --with-coverage --cover-tests
+   - py.test
+   - py.test --cov
 
 
 after_success:
