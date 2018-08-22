@@ -11,7 +11,7 @@ install:
 # command to run tests
 script:
    - nosetests --with-coverage --cover-tests
-   - py.test --cov
+  #  - py.test --cov
 
 
 after_success:
