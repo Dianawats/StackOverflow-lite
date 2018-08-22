@@ -57,3 +57,10 @@ Find the UI here [GitHub Pages](https://Dianawats.github.io/StackOverflow-lite/U
 ## Challenge 2:
 <br>
 Expected to create a set of API endpoints already defined below and use data structures to store data in memory (don’t use a database).
+
+## Technologies used in challenge 2:
+*Python3
+*Flask
+
+
+
