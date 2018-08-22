@@ -138,3 +138,4 @@ answer = AnswerView.as_view('answer')
 qtn_bp.add_url_rule('/questions', view_func=question_list)
 qtn_bp.add_url_rule('/questions/<int:qtn_id>', view_func=question)
 qtn_bp.add_url_rule('/questions/<int:qtn_id>/answers', view_func=answer)
+
