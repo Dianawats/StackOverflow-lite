@@ -10,7 +10,7 @@ install:
 
 # command to run tests
 script:
-   - nosetest --with-coverage --cover-tests
+   - nosetests --with-coverage --cover-tests
    - py.test
    - py.test --cov
 
