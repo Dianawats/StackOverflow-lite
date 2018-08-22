@@ -1,4 +1,4 @@
-[![Coverage Status](https://coveralls.io/repos/github/Dianawats/StackOverflow-lite/badge.svg?branch=getqns)](https://coveralls.io/github/Dianawats/StackOverflow-lite?branch=getqns)
+[![Coverage Status](https://coveralls.io/repos/github/Dianawats/StackOverflow-lite/badge.svg?branch=develop)](https://coveralls.io/github/Dianawats/StackOverflow-lite?branch=develop))
 [![Build Status](https://travis-ci.org/Dianawats/StackOverflow-lite.svg?branch=develop)](https://travis-ci.org/Dianawats/StackOverflow-lite)
 <a href="https://codeclimate.com/github/Dianawats/StackOverflow-lite/maintainability"><img src="https://api.codeclimate.com/v1/badges/811b53b82c3b6b3eb9e3/maintainability" /></a>
 
