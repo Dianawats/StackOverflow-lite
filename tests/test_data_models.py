@@ -7,7 +7,7 @@ class TestDataModels(BaseTestCase):
     """
      Initialises class Data models for data models testing
     Args:
-     BaseTestCase {Class} -- Base test class for running custom tests
+     Base test class for running custom tests
     """
 
     def test_question_model(self):
