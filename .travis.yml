@@ -1,6 +1,9 @@
 language: python
 python:
   - "3.6.5"
+
+cache: pip3
+
 # command to install dependencies
 install:
   - pip install -r requirements.txt
@@ -9,8 +12,10 @@ install:
 script:
   - coverage run -m unittest
   - coverage report
+  - coverage
+  - coveralls
 
-#after_success:
-  #- coveralls
+after_success:
+  - coveralls
 
   
