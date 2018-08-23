@@ -10,7 +10,7 @@
 This is a platform where people can ask questions and provide answers.
 
 <br>
-Find the Site here [GitHub Pages](https://Dianawats.github.io/StackOverflow-lite/UI/)
+Find the Site here [GitHub Pages]( https://dianawats.github.io/StackOverflow-lite/)
 
 <strong>Required Features:</strong> <br>
  
