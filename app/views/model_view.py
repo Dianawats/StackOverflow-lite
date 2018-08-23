@@ -44,8 +44,12 @@ class QuestionsView(MethodView):
         body = sent_data.get('body')
         tag = sent_data.get('tag')
 
-        if not title or not body or not tag:
-            return response('required parameter is missing', 'failed', 400)
+        if not title:
+            return response('title is missing', 'failed', 400)
+        elif not body:
+            return response('body is missing', 'failed', 400)
+        elif not tag:
+            return response('tag is missing', 'failed', 400)
 
         question = Question(title=title, body=body, tag=tag)
         question_controller.insert_question(question)
