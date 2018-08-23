@@ -41,3 +41,6 @@ class BaseTestCase(unittest.TestCase):
         """
         return self.client.get(
              '/api/v1/questions', content_type='application/json')
+
+if __name__ == '__main__':
+    unittest.main()
