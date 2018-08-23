@@ -5,7 +5,7 @@ omit=
     */__pycache__/*
     */venv/*
     */.pyc
-    .env
+    */env/*
 
     */.vscode/*
     */pytest_cache/*
@@ -19,5 +19,6 @@ omit=
     */multiprocessing/*
     */ctypes/*
     *decimal.py*
+    */home/*
     
 
