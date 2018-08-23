@@ -9,16 +9,3 @@ omit=
 
     */.vscode/*
     */pytest_cache/*
-
-    */api/
-    */html/*
-    *mimetypes.py*
-    *hmac.py*
-    *uuid.py*
-    *numbers.py*
-    */multiprocessing/*
-    */ctypes/*
-    *decimal.py*
-    */home/*
-    
-
