@@ -8,8 +8,7 @@ install:
 
 # command to run tests
 script:
-  - py.test --cov
-  - coverage report
+  - pytest && coverage report
 
 
 
