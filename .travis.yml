@@ -1,6 +1,6 @@
 language: python
 python:
-  - "3.6"
+  - "3.6.5"
 # command to install dependencies
 install:
   - pip install -r requirements.txt
@@ -8,7 +8,10 @@ install:
 
 # command to run tests
 script:
-  - pytest && coverage report
+  - pytest --cov=.
+  - coverage
+  - coveralls
+  - coverage report
 
 
 
