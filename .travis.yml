@@ -12,8 +12,8 @@ install:
 
 # command to run tests
 script:
-  - py.test
-  - py.test --cov
+  - py.test --cov=app
+  - coverage report
 
 after_success:
   - coveralls
