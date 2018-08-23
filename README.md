@@ -3,63 +3,66 @@
 <a href="https://codeclimate.com/github/Dianawats/StackOverflow-lite/maintainability"><img src="https://api.codeclimate.com/v1/badges/811b53b82c3b6b3eb9e3/maintainability" /></a>
 
 
-<strong>Project Overview</strong><br>
+## Project Overview
 
- <strong>StackOverflow-lite:</strong> <br>
+### StackOverflow-lite:
  
 This is a platform where people can ask questions and provide answers.
 
-<br>
 Find the Site here [GitHub Pages]( https://dianawats.github.io/StackOverflow-lite/)
 
-<strong>Required Features:</strong> <br>
+#### Required Features:
  
-Users can create an account and log in. <br>
-Users can post questions.<br>
-Users can delete the questions they post.<br>
-Users can post answers.<br> 
-Users can view the answers to questions.<br>
-Users can accept an answer out of all the answers to his/her question as the preferred answer. <br>
+Users can create an account and log in. 
+Users can post questions.
+Users can delete the questions they post.
+Users can post answers. 
+Users can view the answers to questions.
+Users can accept an answer out of all the answers to his/her question as the preferred answer. 
 
-<strong>Optional Features:</strong><br>
+#### Optional Features:
 
 Users can upvote or downvote an answer. 
 Users can comment on an answer. 
 Users can fetch all questions he/she has ever asked on the platform 
 Users can search for questions on the platform Users can view questions with the most answers.
 
-<strong>Getting Started</strong><br>
+#### Getting Started
 
 
-<strong>Installations:</strong><br>
-Clone the project into your local repository using this command:<br>
-git clone https://github.com/Dianawats/StackOverflow-lite<br>
+#### Installations:
+Clone the project into your local repository using this command:
+git clone https://github.com/Dianawats/StackOverflow-lite
 
-Supposed to switch the project to the Master when it is ready for production<br>
+Supposed to switch the project to the Master when it is ready for production
 
-<strong>Technologies used:</strong><br>
-The project has been built with the following technologies so far:<br>
-<ol>
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>Javascript</li>
-</ol>
+#### Technologies used:
+The project has been built with the following technologies so far:
 
-<br>
+1. HTML
+2. CSS
+3. Javascript
 
 Find the UI here [GitHub Pages](https://Dianawats.github.io/StackOverflow-lite/UI/)
 
-<strong>Author:</strong><br>
-
-<Strong>Diana Nakiwala</strong>
 
 ## Challenge 2:
-<br>
+
 Expected to create a set of API endpoints already defined below and use data structures to store data in memory (don’t use a database).
 
 ## Technologies used in challenge 2:
-*Python3
-*Flask
 
+* Python3
+* Flask
+
+Find the GitHub repo here for challenge 2: https://github.com/Dianawats/StackOverflow-lite/tree/develop
+
+Here is my Heroku link: https://stackoverflow-lite-andela.herokuapp.com
+
+
+
+#### Author:
+
+#### Diana Nakiwala
 
 
