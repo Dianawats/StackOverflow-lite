@@ -10,7 +10,7 @@ script:
   - coverage run -m unittest
   - coverage report
 
-after_success:
-  - coveralls
+#after_success:
+  #- coveralls
 
   
