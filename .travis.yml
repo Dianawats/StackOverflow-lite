@@ -7,14 +7,13 @@ cache: pip3
 # command to install dependencies
 install:
   - pip install -r requirements.txt
+  - pip install pytest pytest-cov
+  - pip install coveralls
 
 # command to run tests
 script:
-  - coverage run -m unittest
-  - pytest --cov=.
-  - coverage report
-  - coverage
-  - coveralls
+  - py.test
+  - py.test --cov
 
 after_success:
   - coveralls
