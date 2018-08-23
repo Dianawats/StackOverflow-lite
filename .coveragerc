@@ -1,11 +1,23 @@
-*/.pytest_cache/*
-*/__pycache__/*
-*/venv/*
-*/.pyc
-.env
+[report]=
+show_missing = True
+omit=
+    */.pytest_cache/*
+    */__pycache__/*
+    */venv/*
+    */.pyc
+    .env
 
-*/.vscode/*
-*/pytest_cache/*
+    */.vscode/*
+    */pytest_cache/*
 
-*/api/*
+    */api/
+    */html/*
+    *mimetypes.py*
+    *hmac.py*
+    *uuid.py*
+    *numbers.py*
+    */multiprocessing/*
+    */ctypes/*
+    *decimal.py*
+    
 
