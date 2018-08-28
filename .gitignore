@@ -6,3 +6,5 @@
 
 *.vscode/
 .pytest_cache
+venv/
+edb.py/
