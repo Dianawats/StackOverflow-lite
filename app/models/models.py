@@ -1,27 +1,31 @@
 
-class Question(object):
+"""This module handles database queries"""
+
+
+class User:
+    """This class does all database related stuff for the user"""
+
+    def __init__(self, user_id, name, username, password):
+        self.user_id = user_id
+        self.name = name
+        self.username = username
+        self.password = password
+
+
+class Question:
     """
     This class defines Question Model
     """
 
     def __init__(self, title, body, tag):
-        self.id = 0
+        """Initializes the question object"""
+        self.question_id = id
         self.title = title
         self.body = body
         self.tag = tag
-        self.answers = []
-
-    def jsonify(self):
-        return {
-            "id": self.id,
-            "title": self.title,
-            "body": self.body,
-            "tag": self.tag,
-            "answers": self.answers
-        }
 
 
-class Answer(object):
+class Answers:
     """
     Answer Model
     """
@@ -29,10 +33,4 @@ class Answer(object):
         self.id = ans_id
         self.body = body
 
-    def make_json(self):
-        return {
-            "id": self.id,
-            "body": self.body,
-        }
 
-        
