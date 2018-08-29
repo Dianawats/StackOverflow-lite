@@ -18,24 +18,59 @@ class QuestionController():
     last_id = 0
 
     def __init__(self):
-        self.questions = {}
+        self.questions = []
 
     def insert_question(self, question):
+        for q in self.questions:
+            if q.title == question.title:
+                return 'Question with title ' + question.title + ' already exists'
         self.__class__.last_id += 1
         question.id = self.__class__.last_id
-        self.questions[self.__class__.last_id] = question
+        self.questions.append(question)
 
-    def get_question(self, qtn_id):
+    def get_question_by_id(self, qtn_id):
+        for q in self.questions:
+            if q.id == qtn_id:
+                return q
+        return 'Question ' + str(qtn_id) + ' doesnot exist'
 
-        try:
-            return self.questions[qtn_id]
+    def get_question_by_author(self, author):
+        for q in self.questions:
+            if q.author == author:
+                return q
+        return 'Question ' + author + ' doesnot exist'
 
-        except KeyError as e:
-            return e
+    def delete_question_by_id(self, qtn_id):
+        for q in self.questions:
+            if q.id == qtn_id:
+                return self.questions.remove(q)
+        return 'Question ' + str(qtn_id) + ' doesnot exist'
 
     def get_all_questions(self):
-        return [value for value in self.questions.values()]
+        if len(self.questions) > 0:
+            return [q for q in self.questions]
+        return "No questions available"
+
+    def get_all_questions_by_author(self, author):
+        if len(self.questions) > 0:
+            qtns = [q for q in self.questions if q.author == author]
+            if len(qtns) > 0:
+                return qtns
+        return "No questions available"
+
+    def get_all_questions_with_most_answers(self):
+        if len(self.questions) > 0:
+            qtns = [q for q in self.questions if len(q.anwers) > 0]
+            if len(qtns) > 0:
+                return "No answers available"
+            if len(qtns) == 1:
+                return qtns
+            highest = 2
+            super = object
+            for q in qtns:
+                if len(q.answers) > highest:
+                    super = q
+
 
 # A question controller instance
 question_controller = QuestionController()
-
